@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" style="max-width: 500px; padding-top: 4rem;">
+        <h1 class="text-center mb-4">TaskMaster</h1>
+        <div class="card" id="loginSection">
+            <h2 class="mb-4 text-center">Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label class="form-label">Username</label>
+                    <input type="text" id="loginUsername" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" id="loginPassword" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+                <div class="text-center mt-4" style="font-size: 0.875rem;">
+                    Don't have an account? <a href="#" id="showRegister" style="color: var(--primary); font-weight: 500;">Register here</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="card hidden" id="registerSection">
+            <h2 class="mb-4 text-center">Register</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label class="form-label">Username</label>
+                    <input type="text" id="regUsername" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Role</label>
+                    <select id="regRole" class="form-control" required>
+                        <option value="User">User</option>
+                        <option value="Admin">Administrator</option>
+                        <option value="Guest">Guest</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" id="regPassword" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+                <div class="text-center mt-4" style="font-size: 0.875rem;">
+                    Already have an account? <a href="#" id="showLogin" style="color: var(--primary); font-weight: 500;">Login here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
